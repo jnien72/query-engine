@@ -9,6 +9,7 @@ libraryDependencies ++= Seq(
   "org.apache.spark" % "spark-sql_2.11" % "2.1.1",
   "org.apache.spark" % "spark-hive_2.11" % "2.1.1",
   "org.apache.spark" % "spark-mllib_2.11" % "2.1.1",
+
   "org.apache.hadoop" % "hadoop-client" % "2.7.7",
   "org.apache.hadoop" % "hadoop-common" % "2.7.7",
   "org.apache.hadoop" % "hadoop-hdfs" % "2.7.7",
