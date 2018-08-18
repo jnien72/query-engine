@@ -5,7 +5,7 @@ import org.apache.spark.{SparkConf, SparkContext}
 
 object SparkUtils {
 
-  var sparkSession:SparkSession=null
+  private var sparkSession:SparkSession=null
 
   def getSparkSession():SparkSession={
     this.synchronized{
