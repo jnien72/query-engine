@@ -1,11 +1,14 @@
 package com.test.qe
 
 import com.test.qe.util.{HadoopUtils, SparkUtils}
+import org.apache.spark.mllib.recommendation.{ALS, Rating}
 
 object QueryEngine {
   def main(args:Array[String]):Unit={
+
     HadoopUtils.getHadoopConf()
     val sparkSession=SparkUtils.getSparkSession()
+
     val csisDf=sparkSession.read.parquet("dev/ecs/data/csis")
     csisDf.createOrReplaceTempView("csis")
 
@@ -16,8 +19,5 @@ object QueryEngine {
 
     csisDf2.show(1000)
 
-
-
-//    sparkSession.sql("select * from csis")
-  }
+ }
 }
